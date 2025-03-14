@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Days</title>
+</head>
+<body>
+    <button onclick="showRandomVideo()">Show Random Video</button>
+    <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+    <script>
+        const videos = [
+            "https://www.youtube.com/embed/_e9yMqmXWo0",
+            "https://www.youtube.com/embed/F2YpXC1itEE",
+            "https://www.youtube.com/embed/EB7Q5JEppFE"
+        ];
+
+        function showRandomVideo() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            document.getElementById("videoFrame").src = videos[randomIndex];
+        }
+    </script>
+</body>
+</html>
